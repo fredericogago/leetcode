@@ -21,7 +21,6 @@ Organizado por categorias:
 - dp/
 - trees/
 - graphs/
-- math/
 - utils/
 
 
@@ -44,7 +43,6 @@ Cada solução inclui:
 | DP       | ⏳ 0    |                                |
 | Árvores  | ⏳ 0    |                                |
 | Grafos   | ⏳ 0    |                                |
-| Math     | ⏳ 0    |                                |
 
 ---
 
