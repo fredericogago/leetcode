@@ -47,7 +47,7 @@ jobs:
 
       - name: Run Ruff, Mypy & Pyright
         run: |
-          ruff check . --config ruff.toml --output-format=github
+          ruff check . --config pyproject.toml --output-format=github
           mypy .
           pyright
 
