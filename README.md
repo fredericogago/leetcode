@@ -75,20 +75,6 @@ def twoSum(nums: List[int], target: int) -> List[int]:
 ```
 
 
-## ⚙️ Como usar este repositório
-
-
-```bash
-# Clona o repositório
-git clone https://github.com/seu-usuario/leetcode-python-clean-code.git
-
-# Resolve novos desafios
-# Adiciona os arquivos na pasta correta
-
-# Executa o script para fazer commit e push
-./scripts/commit_and_push.sh "Add solution for X problem [medium, dp]"
-```
-
 ## 📣 Contato
 
 - [LinkedIn](www.linkedin.com/in/frederico-gago-5849281aa)

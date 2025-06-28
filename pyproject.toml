@@ -1,6 +1,150 @@
 [project]
 name = "leetcode"
 version = "0.1.0"
-description = "Add your description here"
+description = "LeetCode Python 3.13 solutions"
 requires-python = ">=3.13"
-dependencies = []
+
+dependencies = [
+  "ruff",
+  "mypy",
+  "pyright",
+  "radon",
+]
+
+[tool.radon]
+cc_min = "B"
+exclude = "*/tests/*"
+
+[tool.ruff]
+exclude = [
+  ".bzr",
+  ".direnv",
+  ".eggs",
+  ".git",
+  ".git-rewrite",
+  ".hg",
+  ".ipynb_checkpoints",
+  ".mypy_cache",
+  ".nox",
+  ".pants.d",
+  ".pyenv",
+  ".pytest_cache",
+  ".pytype",
+  ".ruff_cache",
+  ".svn",
+  ".tox",
+  ".venv",
+  ".vscode",
+  "__pypackages__",
+  "_build",
+  "buck-out",
+  "build",
+  "dist",
+  "node_modules",
+  "site-packages",
+  "venv",
+  "__pycache__",
+  "*/alembic/*",
+  "scripts/*",
+  ".idea",
+  ".cache",
+  "docs/*"
+]
+indent-width = 4
+line-length = 79
+target-version = "py312"
+
+[tool.ruff.format]
+docstring-code-format = true
+indent-style = "space"
+line-ending = "auto"
+quote-style = "double"
+skip-magic-trailing-comma = false
+
+[tool.ruff.lint]
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+# Allow fix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+flake8-quotes = { inline-quotes = "double" }
+ignore = ["PLR0913"]
+select = [
+  "F",
+  "E",
+  "W",
+  "C90",
+  "I",
+  "N",
+  "UP",
+  "YTT",
+  # "ANN",  # flake8-annotations
+  "ASYNC",
+  "S",
+  "BLE",
+  "FBT",
+  "B",
+  "A",
+  # "COM",
+  "C4",
+  "T10",
+  "D",
+  "EM",
+  "EXE",
+  "FA",
+  # "ISC",
+  "ICN",
+  "G",
+  "INP",
+  "PIE",
+  "T20",
+  "PYI",
+  # "PT",
+  "Q",
+  "RSE",
+  "RET",
+  "SLF",
+  "SLOT",
+  "SIM",
+  "TID",
+  "TCH",
+  "INT",
+  "ARG",
+  "PTH",
+  "ERA",
+  "PD",
+  "PGH",
+  "PL",
+  "TRY",
+  "FLY",
+  "NPY",
+  "AIR",
+  "PERF",
+  # "FURB",
+  # "LOG",
+  "RUF"
+]
+
+[tool.ruff.lint.isort]
+force-single-line = true
+known-third-party = ["fastapi", "pydantic", "starlette"]
+lines-after-imports = 2
+
+[tool.ruff.lint.per-file-ignores]
+"**tests/**/**.py" = [
+  "S101",
+  "ARG",
+  "FBT",
+  "PLR2004",
+  "S311",
+  "SLF001"
+]
+"__init__.py" = ["F401", "D104"]
+
+[tool.ruff.lint.pycodestyle]
+max-doc-length = 88
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.pyupgrade]
+keep-runtime-typing = true
