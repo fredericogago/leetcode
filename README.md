@@ -16,12 +16,15 @@ Repositório com soluções para problemas do [LeetCode](https://leetcode.com/) 
 
 Organizado por categorias:
 
-- arrays/
-- strings/
-- dp/
-- trees/
-- graphs/
-- utils/
+src
+├── __init__.py
+├── leetcode
+│   └── editor
+│       └── en
+│           ├── [1]Two Sum.py
+│           ├── [9]Palindrome Number.py
+└── utils
+    └── __init__.py
 
 
 Cada solução inclui:
