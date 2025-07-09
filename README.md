@@ -1,20 +1,18 @@
 # 🧠 LeetCode Python Clean Code
 
-Repositório com soluções para problemas do [LeetCode](https://leetcode.com/) escritos em **Python 3.13**, seguindo princípios de **Clean Code**, **SOLID**, boas práticas de performance e documentação.
+Repositório com soluções para desafios do [LeetCode](https://leetcode.com/) desenvolvidas em **Python 3.13**, aplicando princípios de **Clean Code**, **SOLID**, boas práticas de performance e documentação clara.
 
 ---
 
 ## 🚀 Objetivo
 
-- Demonstrar proficiência em resolução de problemas usando Python
-- Criar portfólio técnico atrativo para recrutadores
-- Aplicar boas práticas de design e arquitetura mesmo em algoritmos
+- 📈 Demonstrar proficiência em resolução de problemas com Python moderno
+- 💼 Criar um portfólio técnico atrativo para recrutadores
+- 🧩 Aplicar boas práticas de design e arquitetura até mesmo em algoritmos
 
 ---
 
 ## 🧩 Estrutura do repositório
-
-Organizado por categorias:
 
 src
 ├── __init__.py
@@ -27,25 +25,14 @@ src
     └── __init__.py
 
 
+
 Cada solução inclui:
 
-- Explicação do problema
-- Link para o LeetCode
-- Estratégia de resolução
-- Complexidades
-- Type hints e docstrings
-
----
-
-## ✅ Progresso
-
-| Categoria | Feitos | Exemplos                       |
-|----------|--------|--------------------------------|
-| Arrays   | ✅ 1    | `two_sum.py`                   |
-| Strings  | ⏳ 0    |                                |
-| DP       | ⏳ 0    |                                |
-| Árvores  | ⏳ 0    |                                |
-| Grafos   | ⏳ 0    |                                |
+- ✅ Explicação clara do problema  
+- 🔗 Link direto para o enunciado original  
+- 🧠 Estratégia de resolução com boas práticas  
+- ⏱️ Análise de complexidade (tempo e espaço)  
+- 🧾 Type hints e docstrings seguindo o padrão Google Style
 
 ---
 
@@ -59,7 +46,8 @@ Difficulty: Easy
 Tags: Array, HashMap
 
 Approach:
-- Itera pelos números e usa um dicionário para guardar o complemento
+- Itera pelos números e utiliza um dicionário para armazenar complementos.
+- Se o complemento do número atual já estiver no dicionário, retorna os índices.
 
 Time Complexity: O(n)
 Space Complexity: O(n)
@@ -75,9 +63,32 @@ def twoSum(nums: List[int], target: int) -> List[int]:
         lookup[num] = i
 ```
 
+---
+
+## 📌 Futuras melhorias
+
+* ✅ Testes com `pytest`
+* 📊 Benchmarks para comparar abordagens
+* 🧠 Templates padrão para novos problemas
+* 🌐 Versão traduzida para português e inglês
+
+---
 
 ## 📣 Contato
 
 - [LinkedIn](www.linkedin.com/in/frederico-gago-5849281aa)
 - [GitHub](https://github.com/fredericogago)
 - [Website](https://fredericogago.github.io/frederico-gago/)
+
+---
+
+## 📘 Diário de Progresso
+
+Acompanho minha evolução no ficheiro [`leetcode-journal.md`](./leetcode-journal.md), onde anoto:
+
+- ✅ Problemas resolvidos com link para a solução
+- 📌 Problemas que quero revisar ou reescrever
+- 🧠 Padrões recorrentes (e.g., sliding window, binary search)
+- 📓 Notas sobre otimizações, abordagens alternativas e aprendizados
+
+> Este diário ajuda a manter um ciclo de melhoria contínua — e também serve como referência rápida para revisões técnicas.
