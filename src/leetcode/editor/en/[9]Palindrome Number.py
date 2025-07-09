@@ -1,41 +1,77 @@
 """
 Module: palindrome_number
 
-This module provides two solutions for checking whether an integer is a palindrome
-without converting the number to a string.
+This module provides **three solutions** to check whether an integer is a
+palindrome — that is, whether it reads the same forward and backward — **with
+or without converting the number to a string**.
+
+Problem:
+--------
+Given an integer `x`, return `True` if `x` is a palindrome, and `False` otherwise.
+
+Constraints:
+    -2³¹ <= x <= 2³¹ - 1
+
+Examples:
+    Input:  x = 121   → Output: True
+    Input:  x = -121  → Output: False
+    Input:  x = 10    → Output: False
+
+Follow-up:
+    Could you solve it **without converting the integer to a string**?
 
 Solutions Implemented:
-----------------------
-1. Iterative Reversal (reverse_iterative):
-   - Uses digit-by-digit reversal with arithmetic operations only
-   - Simple, efficient, and stable for all integer inputs
+-----------------------
+1. 🔤 `SolutionStr` – **String-based approach**
+    - Converts the integer to a string and checks if the reversed string is
+    equal to the original.
+    - ✅ Simple and performant (Runtime: 4 ms, Beats 80.12%)
+    - ❌ Does not fulfill the follow-up constraint
 
-2. Mathematical Reversal (reverse_math):
-   - Uses a closed-form expression involving log10 and powers of 10
-   - Based on a formula from: https://math.stackexchange.com/q/480068
-   - Mathematically elegant but slightly slower due to floating-point and exponentiation overhead
+2. 🧮 `SolutionMath` – **Mathematical closed-form digit reversal**
+    - Uses a formula based on powers of 10 and floor division:
+        reverse(x) = x × 10ⁿ − 99 × Σₖ floor(x / 10ᵏ) × 10ⁿ⁻ᵏ
+    - Inspired by: https://math.stackexchange.com/q/480068
+    - ✅ Mathematically elegant
+    - ⚠️ Slightly slower and sensitive to floating-point rounding
+    - ✅ No strings used
+
+3. 🔁 `Solution` – **Iterative digit reversal (preferred)**
+    - Reverses the number using repeated division and modulus:
+        while x > 0: result = result × 10 + x % 10
+    - ✅ Fully arithmetic, fast, easy to debug
+    - ✅ Best option for production
+    - ✅ Satisfies the follow-up constraint
 
 Benchmark Results:
-------------------
+-------------------
 Tested on numbers with increasing digit counts (11, 101, 1001, ..., 10000001)
 
     Iterative Duration : ~0.000009 seconds
     Math Duration      : ~0.000033 seconds
 
-Result:
--------
-- The iterative method is approximately **3.7× faster** than the closed-form math method
-- Both return identical results for all tested inputs
-- For performance-critical cases, the iterative method is preferred
-
-Time Spent:
+Conclusion:
 -----------
-- Problem analysis, diagrams, and reading questions : 20 minutes
-- Coding, debugging, refactoring, and benchmarking  : 1 hour 13 minutes
+- Both non-string methods return correct results for all tested inputs.
+- The **iterative solution is ~3.7× faster** than the mathematical one.
+- Use `Solution` for performance-critical environments.
+- `SolutionMath` is an interesting academic alternative.
+- `SolutionStr` is fine for quick prototyping when constraints don’t matter.
 
-Total time invested: **1 hour 33 minutes**
+Time Invested:
+--------------
+- Reading problem, analyzing constraints, diagramming logic: 20 minutes
+- Coding, testing, refactoring, benchmarking: 1 hour 13 minutes
+
+🕐 Total time: **1 hour 33 minutes**
+
+Personal Note:
+--------------
+This exercise helped reinforce clean arithmetic logic, floating-point edge cases, and benchmarking practices.
+It was a good opportunity to write and compare **clean, elegant Python 3.13 solutions** — and deepen my understanding of both performance and readability.
 
 """
+
 
 # Given an integer x, return true if x is a palindrome, and false otherwise.
 # 
@@ -268,3 +304,21 @@ class SolutionMath:
 
         return first_term - 99 * acc
 
+class SolutionStr:
+    """Check if an integer is a palindrome without converting to a string.
+
+    This class provides a method to determine whether a given integer
+    reads the same forward and backward, using only arithmetic operations.
+    """
+
+    def isPalindrome(self, x: int) -> bool:
+        """Check if a number is palindrome
+
+        Args:
+            x (int): The number to check if it is a palindrome
+
+        Returns:
+            bool: True if it is a palindrome, false otherwise.
+        """
+        num_str = str(x)
+        return num_str == num_str[::-1]
