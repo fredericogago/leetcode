@@ -3,6 +3,17 @@
   <component name="LeetcodeEditor">
     <option name="projectConfig">
       <map>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[13]Roman to Integer.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[13]Roman to Integer.md" />
+              <option name="frontendQuestionId" value="leetcode.com13" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[13]Roman to Integer.py" />
+              <option name="titleSlug" value="roman-to-integer" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[1]Two Sum.py">
           <value>
             <LeetcodeEditor>
