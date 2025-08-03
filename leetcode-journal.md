@@ -1,6 +1,6 @@
 # 📘 LeetCode Progress Journal
 
-![LeetCode Progress](https://img.shields.io/badge/LeetCode-3%2F3611%20Problems-blue)
+![LeetCode Progress](https://img.shields.io/badge/LeetCode-4%2F3611%20Problems-blue)
 ![Language](https://img.shields.io/badge/Python-3.13-blue?logo=python)
 ![Clean Code](https://img.shields.io/badge/Clean%20Code-First%20Principle-brightgreen)
 
@@ -15,6 +15,7 @@ This journal tracks my journey through LeetCode, focusing on problem-solving wit
 | ID  | Title             | Solution Link                                            | Patterns         |
 |-----|--------------------|-----------------------------------------------------------|------------------|
 | 13  | Roman to Integer   | [View Solution](src/leetcode/editor/en/[13]Roman to Integer.py) | #Python #LeetCode #CleanCode #Performance #ProblemSolving #Refactor |
+| 14  | Longest Common Prefix | [View Solution](src/leetcode/editor/en/[14]Longest Common Prefix.py) | #Python #LeetCode #CleanCode #Benchmarking #ProblemSolving #Algorithms #DeveloperJourney |
 | 1   | Two Sum            | [View Solution](src/leetcode/editor/en/[1]Two Sum.py)       | Array, HashMap   |
 | 9   | Palindrome Number  | [View Solution](src/leetcode/editor/en/[9]Palindrome Number.py) | Two Pointers     |
 
